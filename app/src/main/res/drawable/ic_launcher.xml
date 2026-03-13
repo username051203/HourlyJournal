@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Navy circle background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#1A237E"/>
+            <size android:width="108dp" android:height="108dp"/>
+        </shape>
+    </item>
+
+    <!-- White left page -->
+    <item android:left="18dp" android:right="56dp"
+          android:top="22dp"  android:bottom="22dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <corners android:topLeftRadius="4dp" android:bottomLeftRadius="4dp"/>
+        </shape>
+    </item>
+
+    <!-- Cream right page -->
+    <item android:left="56dp" android:right="18dp"
+          android:top="22dp"  android:bottom="22dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF9C4"/>
+            <corners android:topRightRadius="4dp" android:bottomRightRadius="4dp"/>
+        </shape>
+    </item>
+
+    <!-- Amber spine -->
+    <item android:left="49dp" android:right="49dp"
+          android:top="20dp"  android:bottom="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFC107"/>
+        </shape>
+    </item>
+
+    <!-- Line 1 on left page -->
+    <item android:left="22dp" android:right="62dp"
+          android:top="36dp"  android:bottom="68dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#90CAF9"/>
+        </shape>
+    </item>
+
+    <!-- Line 2 on left page -->
+    <item android:left="22dp" android:right="62dp"
+          android:top="44dp"  android:bottom="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#90CAF9"/>
+        </shape>
+    </item>
+
+    <!-- Line 3 on left page -->
+    <item android:left="22dp" android:right="62dp"
+          android:top="52dp"  android:bottom="52dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#90CAF9"/>
+        </shape>
+    </item>
+
+    <!-- Clock circle on right page (amber ring) -->
+    <item android:left="62dp" android:right="22dp"
+          android:top="34dp"  android:bottom="54dp">
+        <shape android:shape="oval">
+            <stroke android:width="2dp" android:color="#FFC107"/>
+            <solid android:color="#FFF9C4"/>
+        </shape>
+    </item>
+
+    <!-- Clock center dot -->
+    <item android:left="76dp" android:right="76dp"
+          android:top="48dp"  android:bottom="48dp">
+        <shape android:shape="oval">
+            <solid android:color="#212121"/>
+        </shape>
+    </item>
+
+    <!-- Bottom amber label bar -->
+    <item android:left="28dp" android:right="28dp"
+          android:top="78dp"  android:bottom="16dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFC107"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+</layer-list>

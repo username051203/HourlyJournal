@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/journal_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
+
+    <RelativeLayout
+        android:id="@+id/journal_header"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_journal_header">
+
+        <!-- Moon/Sun circle top-left -->
+        <View
+            android:id="@+id/view_header_circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_sun_circle" />
+
+        <!-- Hamburger top-left -->
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_menu"
+            android:scaleType="fitCenter"
+            android:padding="10dp" />
+
+        <!-- Time — below hamburger on left -->
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:text="08:00 AM"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#212121" />
+
+        <!-- Greeting — right side, below hamburger, won't overlap it -->
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="56dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="end"
+            android:text="Good Morning" />
+
+        <TextView
+            android:id="@+id/tv_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="84dp"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:text="" />
+
+        <!-- Date nav pills row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btn_calendar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_pill_unselected"
+                android:src="@drawable/ic_calendar"
+                android:scaleType="fitCenter"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/btn_day_prev2"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Feb 23"
+                android:textSize="13sp"
+                android:background="@drawable/bg_pill_unselected" />
+
+            <Button
+                android:id="@+id/btn_day_prev1"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Feb 24"
+                android:textSize="13sp"
+                android:background="@drawable/bg_pill_unselected" />
+
+            <Button
+                android:id="@+id/btn_day_today"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Today"
+                android:textSize="13sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_pill_selected" />
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_pill_unselected"
+                android:src="@drawable/ic_search"
+                android:scaleType="fitCenter"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@drawable/bg_pill_unselected"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search entries..."
+                android:textSize="14sp"
+                android:inputType="text"
+                android:imeOptions="actionSearch" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_section_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp"
+        android:text="Your day in a nutshell"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_hour_slots"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+</LinearLayout>

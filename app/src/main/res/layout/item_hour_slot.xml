@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="56dp"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/bg_slot_card">
+
+        <View
+            android:id="@+id/view_tag_color"
+            android:layout_width="4dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="12dp"
+            android:visibility="invisible"
+            android:background="#26C6DA" />
+
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:text="2:00 AM" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:background="#E0E0E0"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/tv_slot_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#9E9E9E"
+            android:text="Tap to enter / Hold to select" />
+
+        <TextView
+            android:id="@+id/tv_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="★"
+            android:textSize="14sp"
+            android:textColor="#FFC107"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

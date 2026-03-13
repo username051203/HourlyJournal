@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light mode -->
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorAccent">#26C6DA</color>
+    <color name="nav_icon_inactive">#9E9E9E</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="background_light">#F0F4F8</color>
+
+    <!-- Dark mode -->
+    <color name="dark_bg">#121212</color>
+    <color name="dark_surface">#1E1E1E</color>
+    <color name="dark_surface_2">#2A2A2A</color>
+    <color name="dark_text_primary">#EEEEEE</color>
+    <color name="dark_text_secondary">#9E9E9E</color>
+    <color name="dark_divider">#333333</color>
+    <color name="dark_accent">#26C6DA</color>
+</resources>
